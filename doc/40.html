@@ -1,0 +1,1023 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>40 | 互联网架构模板：“存储层”技术 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="41.html" />
+    
+    
+    <link rel="prev" href="39.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    开篇词 | 照着做，你也能成为架构师！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01 | 架构到底是指什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02 | 架构设计的历史背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03 | 架构设计的目的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04 | 复杂度来源：高性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05 | 复杂度来源：高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06 | 复杂度来源：可扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07 | 复杂度来源：低成本、安全、规模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 | 架构设计三原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09 | 架构设计原则案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="09-1.html">
+            
+                <a href="09-1.html">
+            
+                    
+                    架构专栏特别放送 | “华仔，放学别走！”第1期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10 | 架构设计流程：识别复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11 | 架构设计流程：设计备选方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12 | 架构设计流程：评估和选择备选方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13 | 架构设计流程：详细方案设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    14 | 高性能数据库集群：读写分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    15 | 高性能数据库集群：分库分表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="15-1.html">
+            
+                <a href="15-1.html">
+            
+                    
+                    架构专栏特别放送 | “华仔，放学别走！” 第2期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    16 | 高性能NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="17.html">
+            
+                <a href="17.html">
+            
+                    
+                    17 | 高性能缓存架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="18.html">
+            
+                <a href="18.html">
+            
+                    
+                    18 | 单服务器高性能模式：PPC与TPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    19 | 单服务器高性能模式：Reactor与Proactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="20.html">
+            
+                <a href="20.html">
+            
+                    
+                    20 | 高性能负载均衡：分类及架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.24" data-path="21.html">
+            
+                <a href="21.html">
+            
+                    
+                    21 | 高性能负载均衡：算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.25" data-path="22.html">
+            
+                <a href="22.html">
+            
+                    
+                    22 | 想成为架构师，你必须知道CAP理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.26" data-path="23.html">
+            
+                <a href="23.html">
+            
+                    
+                    23 | 想成为架构师，你必须掌握的CAP细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.27" data-path="24.html">
+            
+                <a href="24.html">
+            
+                    
+                    24 | FMEA方法，排除架构可用性隐患的利器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.28" data-path="25.html">
+            
+                <a href="25.html">
+            
+                    
+                    25 | 高可用存储架构：双机架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.29" data-path="26.html">
+            
+                <a href="26.html">
+            
+                    
+                    26 | 高可用存储架构：集群和分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.30" data-path="27.html">
+            
+                <a href="27.html">
+            
+                    
+                    27 | 如何设计计算高可用架构？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.31" data-path="27-1.html">
+            
+                <a href="27-1.html">
+            
+                    
+                    如何高效地学习开源项目 | “华仔，放学别走！” 第3期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.32" data-path="28.html">
+            
+                <a href="28.html">
+            
+                    
+                    28 | 业务高可用的保障：异地多活架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.33" data-path="29.html">
+            
+                <a href="29.html">
+            
+                    
+                    29 | 异地多活设计4大技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.34" data-path="30.html">
+            
+                <a href="30.html">
+            
+                    
+                    30 | 异地多活设计4步走
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.35" data-path="31.html">
+            
+                <a href="31.html">
+            
+                    
+                    31 | 如何应对接口级的故障？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.36" data-path="32.html">
+            
+                <a href="32.html">
+            
+                    
+                    32 | 可扩展架构的基本思想和模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.37" data-path="33.html">
+            
+                <a href="33.html">
+            
+                    
+                    33 | 传统的可扩展架构模式：分层架构和SOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.38" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    34 | 深入理解微服务架构：银弹 or 焦油坑？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.39" data-path="35.html">
+            
+                <a href="35.html">
+            
+                    
+                    35 | 微服务架构最佳实践 - 方法篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.40" data-path="36.html">
+            
+                <a href="36.html">
+            
+                    
+                    36 | 微服务架构最佳实践 - 基础设施篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.41" data-path="37.html">
+            
+                <a href="37.html">
+            
+                    
+                    37 | 微内核架构详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.42" data-path="38.html">
+            
+                <a href="38.html">
+            
+                    
+                    38 | 架构师应该如何判断技术演进的方向？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.43" data-path="39.html">
+            
+                <a href="39.html">
+            
+                    
+                    39 | 互联网技术演进的模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.44" data-path="40.html">
+            
+                <a href="40.html">
+            
+                    
+                    40 | 互联网架构模板：“存储层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.45" data-path="41.html">
+            
+                <a href="41.html">
+            
+                    
+                    41 | 互联网架构模板：“开发层”和“服务层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.46" data-path="42.html">
+            
+                <a href="42.html">
+            
+                    
+                    42 | 互联网架构模板：“网络层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.47" data-path="43.html">
+            
+                <a href="43.html">
+            
+                    
+                    43 | 互联网架构模板：“用户层”和“业务层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.48" data-path="44.html">
+            
+                <a href="44.html">
+            
+                    
+                    44 | 互联网架构模板：“平台”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.49" data-path="45.html">
+            
+                <a href="45.html">
+            
+                    
+                    45 | 架构重构内功心法第一式：有的放矢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.50" data-path="46.html">
+            
+                <a href="46.html">
+            
+                    
+                    46 | 架构重构内功心法第二式：合纵连横
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.51" data-path="47.html">
+            
+                <a href="47.html">
+            
+                    
+                    47 | 架构重构内功心法第三式：运筹帷幄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.52" data-path="48.html">
+            
+                <a href="48.html">
+            
+                    
+                    48 | 再谈开源项目：如何选择、使用以及二次开发？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.53" data-path="49.html">
+            
+                <a href="49.html">
+            
+                    
+                    49 | 谈谈App架构的演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.54" data-path="50.html">
+            
+                <a href="50.html">
+            
+                    
+                    50 | 架构实战：架构设计文档模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.55" data-path="50-1.html">
+            
+                <a href="50-1.html">
+            
+                    
+                    架构师成长之路 | “华仔，放学别走！” 第4期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.56" data-path="51.html">
+            
+                <a href="51.html">
+            
+                    
+                    结束语 | 坚持，成就你的技术梦想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.57" data-path="51-1.html">
+            
+                <a href="51-1.html">
+            
+                    
+                    架构师必读书单 | “华仔，放学别走！” 第5期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >40 | 互联网架构模板：“存储层”技术</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="40--&#x4E92;&#x8054;&#x7F51;&#x67B6;&#x6784;&#x6A21;&#x677F;&#xFF1A;&#x5B58;&#x50A8;&#x5C42;&#x6280;&#x672F;">40 | &#x4E92;&#x8054;&#x7F51;&#x67B6;&#x6784;&#x6A21;&#x677F;&#xFF1A;&#x201C;&#x5B58;&#x50A8;&#x5C42;&#x201D;&#x6280;&#x672F;</h1>
+<p>&#x5F88;&#x591A;&#x4EBA;&#x5BF9;&#x4E8E; BAT &#x7684;&#x6280;&#x672F;&#x6709;&#x4E00;&#x79CD;&#x83AB;&#x540D;&#x7684;&#x5D07;&#x62DC;&#x611F;&#xFF0C;&#x89C9;&#x5F97;&#x53EA;&#x6709;&#x5929;&#x624D;&#x624D;&#x80FD;&#x505A;&#x51FA;&#x8FD9;&#x6837;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x7ECF;&#x8FC7;&#x524D;&#x9762;&#x5BF9;&#x67B6;&#x6784;&#x7684;&#x672C;&#x8D28;&#x3001;&#x67B6;&#x6784;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x3001;&#x67B6;&#x6784;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3001;&#x67B6;&#x6784;&#x6F14;&#x8FDB;&#x7B49;&#x591A;&#x65B9;&#x4F4D;&#x7684;&#x63A2;&#x8BA8;&#x548C;&#x9610;&#x8FF0;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x795E;&#x79D8;&#x7684;&#x529B;&#x91CF;&#x548C;&#x9B54;&#x529B;&#x878D;&#x5408;&#x5728;&#x6280;&#x672F;&#x91CC;&#x9762;&#xFF0C;&#x800C;&#x662F;&#x4E1A;&#x52A1;&#x7684;&#x4E0D;&#x65AD;&#x53D1;&#x5C55;&#x63A8;&#x52A8;&#x4E86;&#x6280;&#x672F;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x6B65;&#x4E00;&#x4E2A;&#x811A;&#x5370;&#xFF0C;&#x6301;&#x7EED;&#x51E0;&#x5E74;&#x751A;&#x81F3;&#x5341;&#x51E0;&#x5E74;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x624D;&#x80FD;&#x8FBE;&#x5230;&#x5F53;&#x524D;&#x6280;&#x672F;&#x590D;&#x6742;&#x5EA6;&#x548C;&#x5148;&#x8FDB;&#x6027;&#x3002;</p>
+<p>&#x629B;&#x5F00; BAT &#x5404;&#x81EA;&#x5DEE;&#x5F02;&#x5F88;&#x5927;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x7AD9;&#x5728;&#x6280;&#x672F;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x5176;&#x5B9E; BAT &#x7684;&#x6280;&#x672F;&#x67B6;&#x6784;&#x57FA;&#x672C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x518D;&#x5C06;&#x89C6;&#x89D2;&#x653E;&#x5927;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x6574;&#x4E2A;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x7684;&#x6280;&#x672F;&#x53D1;&#x5C55;&#xFF0C;&#x6700;&#x540E;&#x90FD;&#x662F;&#x6B8A;&#x9014;&#x540C;&#x5F52;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6B63;&#x5904;&#x4E8E;&#x4E00;&#x4E2A;&#x521B;&#x4E1A;&#x516C;&#x53F8;&#xFF0C;&#x6216;&#x8005;&#x6B63;&#x5728;&#x4E3A;&#x6210;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A; BAT &#x62FC;&#x640F;&#xFF0C;&#x90A3;&#x4E48;&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x8FD9;&#x79CD;&#x6280;&#x672F;&#x6A21;&#x5F0F;&#xFF08;&#x6216;&#x8005;&#x53EB;&#x6280;&#x672F;&#x7ED3;&#x6784;&#x3001;&#x6280;&#x672F;&#x67B6;&#x6784;&#xFF09;&#xFF0C;&#x5BF9;&#x4E8E;&#x81EA;&#x5DF1;&#x548C;&#x516C;&#x53F8;&#x7684;&#x53D1;&#x5C55;&#x90FD;&#x5927;&#x6709;&#x88E8;&#x76CA;&#x3002;</p>
+<p>&#x4E92;&#x8054;&#x7F51;&#x7684;&#x6807;&#x51C6;&#x6280;&#x672F;&#x67B6;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x5F20;&#x56FE;&#x57FA;&#x672C;&#x4E0A;&#x6DB5;&#x76D6;&#x4E86;&#x4E92;&#x8054;&#x7F51;&#x6280;&#x672F;&#x516C;&#x53F8;&#x7684;&#x5927;&#x90E8;&#x5206;&#x6280;&#x672F;&#x70B9;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x516C;&#x53F8;&#x53EA;&#x662F;&#x5728;&#x5177;&#x4F53;&#x7684;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x4E0A;&#x7A0D;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x8DF3;&#x51FA;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x8303;&#x7574;&#x3002;</p>
+<p><img src="../image/4032179c7ca698986cb57135d9c69b36.png" alt="img"></p>
+<p>&#x4ECE;&#x672C;&#x671F;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x5C06;&#x9010;&#x5C42;&#x4ECB;&#x7ECD;&#x6BCF;&#x4E2A;&#x6280;&#x672F;&#x70B9;&#x7684;&#x4EA7;&#x751F;&#x80CC;&#x666F;&#x3001;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3001;&#x5173;&#x952E;&#x6280;&#x672F;&#xFF0C;&#x6709;&#x7684;&#x6280;&#x672F;&#x70B9;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x5728;&#x524D;&#x9762;&#x7684;&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x90E8;&#x5206;&#x6709;&#x6240;&#x6D89;&#x53CA;&#xFF0C;&#x56E0;&#x6B64;&#x5C31;&#x4E0D;&#x518D;&#x8BE6;&#x7EC6;&#x5C55;&#x5F00;&#x6280;&#x672F;&#x7EC6;&#x8282;&#x4E86;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x5173;&#x952E;&#x6280;&#x672F;&#x70B9;&#x5206;&#x95E8;&#x522B;&#x7C7B;&#xFF0C;&#x8FDB;&#x800C;&#x5F62;&#x6210;&#x4E00;&#x5F20;&#x67B6;&#x6784;&#x5927;&#x56FE;&#xFF0C;&#x8BA9;&#x67B6;&#x6784;&#x5E08;&#x5BF9;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#x7684;&#x6574;&#x4F53;&#x6280;&#x672F;&#x67B6;&#x6784;&#x6709;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x5168;&#x8C8C;&#x8BA4;&#x77E5;&#x3002;</p>
+<p>&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x6765;&#x804A;&#x804A;&#x4E92;&#x8054;&#x7F51;&#x67B6;&#x6784;&#x6A21;&#x677F;&#x7684;&#x201C;&#x5B58;&#x50A8;&#x5C42;&#x201D;&#x6280;&#x672F;&#x3002;</p>
+<h2 id="sql">SQL</h2>
+<p>SQL &#x5373;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x6240;&#x8BF4;&#x7684;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x3002;&#x524D;&#x51E0;&#x5E74; NoSQL &#x706B;&#x4E86;&#x4E00;&#x9635;&#x5B50;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x7406;&#x89E3;&#x4E3A; NoSQL &#x662F;&#x5B8C;&#x5168;&#x629B;&#x5F03;&#x5173;&#x7CFB;&#x6570;&#x636E;&#xFF0C;&#x5168;&#x90E8;&#x91C7;&#x7528;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x3002;&#x4F46;&#x7ECF;&#x8FC7;&#x51E0;&#x5E74;&#x7684;&#x8BD5;&#x9A8C;&#x540E;&#xFF0C;&#x5927;&#x5BB6;&#x53D1;&#x73B0;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x4E0D;&#x53EF;&#x80FD;&#x5B8C;&#x5168;&#x88AB;&#x629B;&#x5F03;&#xFF0C;NoSQL &#x4E0D;&#x662F; No SQL&#xFF0C;&#x800C;&#x662F; Not Only SQL&#xFF0C;&#x5373; NoSQL &#x662F; SQL &#x7684;&#x8865;&#x5145;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x4E5F;&#x5FC5;&#x987B;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x6570;&#x636E;&#xFF0C;&#x8003;&#x8651;&#x5230; Oracle &#x592A;&#x8D35;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4E13;&#x4EBA;&#x7EF4;&#x62A4;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x90FD;&#x662F;&#x7528; MySQL&#x3001;PostgreSQL &#x8FD9;&#x7C7B;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x3002;&#x8FD9;&#x7C7B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7279;&#x70B9;&#x662F;&#x5F00;&#x6E90;&#x514D;&#x8D39;&#xFF0C;&#x62FF;&#x6765;&#x5C31;&#x7528;&#xFF1B;&#x4F46;&#x7F3A;&#x70B9;&#x662F;&#x6027;&#x80FD;&#x76F8;&#x6BD4;&#x5546;&#x4E1A;&#x6570;&#x636E;&#x5E93;&#x8981;&#x5DEE;&#x4E00;&#x4E9B;&#x3002;&#x968F;&#x7740;&#x4E92;&#x8054;&#x7F51;&#x4E1A;&#x52A1;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x8D8A;&#x6765;&#x8D8A;&#x9AD8;&#xFF0C;&#x5FC5;&#x7136;&#x8981;&#x9762;&#x5BF9;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x5C06;&#x6570;&#x636E;&#x62C6;&#x5206;&#x5230;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5B9E;&#x4F8B;&#x624D;&#x80FD;&#x6EE1;&#x8DB3;&#x4E1A;&#x52A1;&#x7684;&#x6027;&#x80FD;&#x9700;&#x6C42;&#xFF08;&#x5176;&#x5B9E; Oracle &#x4E5F;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x65F6;&#x95F4;&#x65E9;&#x665A;&#x7684;&#x95EE;&#x9898;&#xFF09;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x5E93;&#x62C6;&#x5206;&#x6EE1;&#x8DB3;&#x4E86;&#x6027;&#x80FD;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x4F46;&#x5E26;&#x6765;&#x4E86;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x6570;&#x636E;&#x5982;&#x4F55;&#x62C6;&#x5206;&#x3001;&#x6570;&#x636E;&#x5982;&#x4F55;&#x7EC4;&#x5408;&#xFF1F;&#x8FD9;&#x4E2A;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x8D77;&#x6765;&#x5E76;&#x4E0D;&#x5BB9;&#x6613;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x4E1A;&#x52A1;&#x90FD;&#x53BB;&#x5B9E;&#x73B0;&#x4E00;&#x904D;&#xFF0C;&#x91CD;&#x590D;&#x9020;&#x8F6E;&#x5B50;&#x5C06;&#x5BFC;&#x81F4;&#x6295;&#x5165;&#x6D6A;&#x8D39;&#x3001;&#x6548;&#x7387;&#x964D;&#x4F4E;&#xFF0C;&#x4E1A;&#x52A1;&#x5F00;&#x53D1;&#x60F3;&#x5FEB;&#x90FD;&#x5FEB;&#x4E0D;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4E92;&#x8054;&#x7F51;&#x516C;&#x53F8;&#x6D41;&#x884C;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x4E1A;&#x52A1;&#x53D1;&#x5C55;&#x5230;&#x4E00;&#x5B9A;&#x9636;&#x6BB5;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x5C06;&#x8FD9;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x72EC;&#x7ACB;&#x6210;<strong>&#x4E2D;&#x95F4;&#x4EF6;</strong>&#xFF0C;&#x4F8B;&#x5982;&#x767E;&#x5EA6;&#x7684; DBProxy&#x3001;&#x6DD8;&#x5B9D;&#x7684; TDDL&#x3002;&#x4E0D;&#x8FC7;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x6280;&#x672F;&#x8981;&#x6C42;&#x5F88;&#x9AD8;&#xFF0C;&#x5C06;&#x5206;&#x5E93;&#x5206;&#x8868;&#x505A;&#x5230;&#x81EA;&#x52A8;&#x5316;&#x548C;&#x5E73;&#x53F0;&#x5316;&#xFF0C;&#x4E0D;&#x662F;&#x4E00;&#x4EF6;&#x5BB9;&#x6613;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x662F;&#x89C4;&#x6A21;&#x5F88;&#x5927;&#x7684;&#x516C;&#x53F8;&#x624D;&#x4F1A;&#x81EA;&#x5DF1;&#x505A;&#x3002;&#x4E2D;&#x5C0F;&#x516C;&#x53F8;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#xFF0C;&#x4F8B;&#x5982; MySQL &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684; MySQL Router&#x3001;360 &#x5F00;&#x6E90;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x95F4;&#x4EF6; Atlas&#x3002;</p>
+<p>&#x5047;&#x5982;&#x516C;&#x53F8;&#x4E1A;&#x52A1;&#x7EE7;&#x7EED;&#x53D1;&#x5C55;&#xFF0C;&#x89C4;&#x6A21;&#x7EE7;&#x7EED;&#x6269;&#x5927;&#xFF0C;SQL &#x670D;&#x52A1;&#x5668;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x4E1A;&#x52A1;&#x90FD;&#x57FA;&#x4E8E;&#x7EDF;&#x4E00;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x95F4;&#x4EF6;&#x72EC;&#x7ACB;&#x90E8;&#x7F72;&#x81EA;&#x5DF1;&#x7684; SQL &#x96C6;&#x7FA4;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x65B0;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x95EE;&#x9898;&#xFF0C;&#x5177;&#x4F53;&#x8868;&#x73B0;&#x5728;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x5E93;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x7387;&#x4E0D;&#x9AD8;&#xFF0C;&#x6BD4;&#x8F83;&#x6D6A;&#x8D39;&#x3002;</li>
+<li>&#x5404; SQL &#x96C6;&#x7FA4;&#x5206;&#x5F00;&#x7EF4;&#x62A4;&#xFF0C;&#x6295;&#x5165;&#x7684;&#x7EF4;&#x62A4;&#x6210;&#x672C;&#x8D8A;&#x6765;&#x8D8A;&#x9AD8;&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5B9E;&#x529B;&#x96C4;&#x539A;&#x7684;&#x5927;&#x516C;&#x53F8;&#x6B64;&#x65F6;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x5728; SQL &#x96C6;&#x7FA4;&#x4E0A;&#x6784;&#x5EFA; SQL &#x5B58;&#x50A8;&#x5E73;&#x53F0;&#xFF0C;&#x4EE5;&#x5BF9;&#x4E1A;&#x52A1;&#x900F;&#x660E;&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x8D44;&#x6E90;&#x5206;&#x914D;&#x3001;&#x6570;&#x636E;&#x5907;&#x4EFD;&#x3001;&#x8FC1;&#x79FB;&#x3001;&#x5BB9;&#x707E;&#x3001;&#x8BFB;&#x5199;&#x5206;&#x79BB;&#x3001;&#x5206;&#x5E93;&#x5206;&#x8868;&#x7B49;&#x4E00;&#x7CFB;&#x5217;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x6DD8;&#x5B9D;&#x7684; UMP&#xFF08;Unified MySQL Platform&#xFF09;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h2 id="nosql">NoSQL</h2>
+<p>&#x9996;&#x5148; NoSQL &#x5728;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#x4E0E;&#x4F20;&#x7EDF;&#x7684; SQL &#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4F8B;&#x5982;&#x5178;&#x578B;&#x7684; Memcache &#x7684; key-value &#x7ED3;&#x6784;&#x3001;Redis &#x7684;&#x590D;&#x6742;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;MongoDB &#x7684;&#x6587;&#x6863;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1B;&#x5176;&#x6B21;&#xFF0C;NoSQL &#x65E0;&#x4E00;&#x4F8B;&#x5916;&#x5730;&#x90FD;&#x4F1A;&#x5C06;&#x6027;&#x80FD;&#x4F5C;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x5927;&#x5356;&#x70B9;&#x3002;NoSQL &#x7684;&#x8FD9;&#x4E24;&#x4E2A;&#x7279;&#x70B9;&#x5F88;&#x597D;&#x5730;&#x5F25;&#x8865;&#x4E86;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E0D;&#x8DB3;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A; NoSQL &#x7684;&#x5E94;&#x7528;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x57FA;&#x7840;&#x8981;&#x6C42;&#x3002;</p>
+<p>&#x7531;&#x4E8E; NoSQL &#x65B9;&#x6848;&#x4E00;&#x822C;&#x81EA;&#x5DF1;&#x672C;&#x8EAB;&#x5C31;&#x63D0;&#x4F9B;&#x96C6;&#x7FA4;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982; Memcache &#x7684;&#x4E00;&#x81F4;&#x6027; Hash &#x96C6;&#x7FA4;&#x3001;Redis 3.0 &#x7684;&#x96C6;&#x7FA4;&#xFF0C;&#x56E0;&#x6B64; NoSQL &#x5728;&#x521A;&#x5F00;&#x59CB;&#x5E94;&#x7528;&#x65F6;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x4E0D;&#x50CF; SQL &#x5206;&#x5E93;&#x5206;&#x8868;&#x90A3;&#x4E48;&#x590D;&#x6742;&#x3002;&#x4E00;&#x822C;&#x516C;&#x53F8;&#x4E5F;&#x4E0D;&#x4F1A;&#x5728;&#x5F00;&#x59CB;&#x65F6;&#x5C31;&#x8003;&#x8651;&#x5C06; NoSQL &#x5305;&#x88C5;&#x6210;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x516C;&#x53F8;&#x53D1;&#x5C55;&#x5F88;&#x5FEB;&#xFF0C;&#x4F8B;&#x5982; Memcache &#x7684;&#x8282;&#x70B9;&#x6709;&#x4E0A;&#x5343;&#x751A;&#x81F3;&#x51E0;&#x5343;&#x65F6;&#xFF0C;NoSQL &#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x5C31;&#x5F88;&#x6709;&#x610F;&#x4E49;&#x4E86;&#x3002;&#x9996;&#x5148;&#x662F;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x901A;&#x8FC7;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x80FD;&#x591F;&#x5927;&#x5927;&#x63D0;&#x5347;&#x8FD0;&#x7EF4;&#x6548;&#x7387;&#xFF1B;&#x5176;&#x6B21;&#x662F;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x63D0;&#x5347;&#x8D44;&#x6E90;&#x5229;&#x7528;&#x6548;&#x7387;&#xFF0C;2000 &#x53F0;&#x673A;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x5229;&#x7528;&#x7387;&#x80FD;&#x63D0;&#x5347; 10%&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x51CF;&#x5C11; 200 &#x53F0;&#x673A;&#x5668;&#xFF0C;&#x4E00;&#x5E74;&#x51E0;&#x5341;&#x4E07;&#x5143;&#x5C31;&#x8282;&#x7701;&#x51FA;&#x6765;&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;NoSQL &#x53D1;&#x5C55;&#x5230;&#x4E00;&#x5B9A;&#x89C4;&#x6A21;&#x540E;&#xFF0C;&#x901A;&#x5E38;&#x90FD;&#x4F1A;&#x5728; NoSQL &#x96C6;&#x7FA4;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x518D;&#x5B9E;&#x73B0;&#x7EDF;&#x4E00;<strong>&#x5B58;&#x50A8;&#x5E73;&#x53F0;</strong>&#xFF0C;&#x7EDF;&#x4E00;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x4E3B;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x51E0;&#x4E2A;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x8D44;&#x6E90;&#x52A8;&#x6001;&#x6309;&#x9700;&#x52A8;&#x6001;&#x5206;&#x914D;&#xFF1A;&#x4F8B;&#x5982;&#x540C;&#x4E00;&#x53F0; Memcache &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5185;&#x5B58;&#x5229;&#x7528;&#x7387;&#xFF0C;&#x5206;&#x914D;&#x7ED9;&#x591A;&#x4E2A;&#x4E1A;&#x52A1;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x8D44;&#x6E90;&#x81EA;&#x52A8;&#x5316;&#x7BA1;&#x7406;&#xFF1A;&#x4F8B;&#x5982;&#x65B0;&#x4E1A;&#x52A1;&#x53EA;&#x9700;&#x8981;&#x7533;&#x8BF7;&#x591A;&#x5C11; Memcache &#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x65E0;&#x9700;&#x5173;&#x6CE8;&#x5177;&#x4F53;&#x662F;&#x54EA;&#x4E9B; Memcache &#x670D;&#x52A1;&#x5668;&#x5728;&#x4E3A;&#x81EA;&#x5DF1;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;</li>
+<li>&#x6545;&#x969C;&#x81EA;&#x52A8;&#x5316;&#x5904;&#x7406;&#xFF1A;&#x4F8B;&#x5982;&#x67D0;&#x53F0; Memcache &#x670D;&#x52A1;&#x5668;&#x6302;&#x6389;&#x540E;&#xFF0C;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x5907;&#x4EFD; Memcache &#x670D;&#x52A1;&#x5668;&#x80FD;&#x7ACB;&#x523B;&#x63A5;&#x7BA1;&#x7F13;&#x5B58;&#x8BF7;&#x6C42;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x4E22;&#x5931;&#x5F88;&#x591A;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#x8981;&#x53D1;&#x5C55;&#x5230;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x4E00;&#x822C;&#x4E5F;&#x662F;&#x5927;&#x516C;&#x53F8;&#x624D;&#x4F1A;&#x8FD9;&#x4E48;&#x505A;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x5982;&#x679C;&#x53EA;&#x6709;&#x51E0;&#x5341;&#x53F0; NoSQL &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x505A;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x6536;&#x76CA;&#x4E0D;&#x5927;&#xFF1B;&#x4F46;&#x5982;&#x679C;&#x6709;&#x51E0;&#x5343;&#x53F0; NoSQL &#x670D;&#x52A1;&#x5668;&#xFF0C;NoSQL &#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x5C31;&#x80FD;&#x591F;&#x4EA7;&#x751F;&#x5F88;&#x5927;&#x7684;&#x6536;&#x76CA;&#x3002;</p>
+<h2 id="&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;">&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;</h2>
+<p>&#x9664;&#x4E86;&#x5173;&#x7CFB;&#x578B;&#x7684;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#xFF0C;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6DD8;&#x5B9D;&#x7684;&#x5546;&#x54C1;&#x56FE;&#x7247;&#x3001;&#x5546;&#x54C1;&#x63CF;&#x8FF0;&#xFF1B;Facebook &#x7684;&#x7528;&#x6237;&#x56FE;&#x7247;&#xFF1B;&#x65B0;&#x6D6A;&#x5FAE;&#x535A;&#x7684;&#x4E00;&#x6761;&#x5FAE;&#x535A;&#x5185;&#x5BB9;&#x7B49;&#x3002;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5177;&#x6709;&#x4E09;&#x4E2A;&#x5178;&#x578B;&#x7279;&#x5F81;&#xFF1A;&#x4E00;&#x662F;&#x6570;&#x636E;&#x5C0F;&#xFF0C;&#x4E00;&#x822C;&#x5728; 1MB &#x4EE5;&#x4E0B;&#xFF1B;&#x4E8C;&#x662F;&#x6570;&#x91CF;&#x5DE8;&#x5927;&#xFF0C;Facebook &#x5728; 2013 &#x5E74;&#x6BCF;&#x5929;&#x4E0A;&#x4F20;&#x7684;&#x7167;&#x7247;&#x5C31;&#x8FBE;&#x5230;&#x4E86; 3.5 &#x4EBF;&#x5F20;&#xFF1B;&#x4E09;&#x662F;&#x8BBF;&#x95EE;&#x91CF;&#x5DE8;&#x5927;&#xFF0C;Facebook &#x6BCF;&#x5929;&#x7684;&#x8BBF;&#x95EE;&#x91CF;&#x8D85;&#x8FC7; 10 &#x4EBF;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x57FA;&#x672C;&#x4E0A;&#x6BCF;&#x4E2A;&#x4E1A;&#x52A1;&#x90FD;&#x4F1A;&#x6709;&#x5927;&#x91CF;&#x7684;&#x5C0F;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x4E1A;&#x52A1;&#x90FD;&#x81EA;&#x5DF1;&#x53BB;&#x8003;&#x8651;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;&#x6D77;&#x91CF;&#x5B58;&#x50A8;&#x548C;&#x6D77;&#x91CF;&#x8BBF;&#x95EE;&#xFF0C;&#x6548;&#x7387;&#x81EA;&#x7136;&#x4F1A;&#x4F4E;&#xFF0C;&#x91CD;&#x590D;&#x9020;&#x8F6E;&#x5B50;&#x4E5F;&#x4F1A;&#x6295;&#x5165;&#x6D6A;&#x8D39;&#xFF0C;&#x6240;&#x4EE5;&#x81EA;&#x7136;&#x800C;&#x7136;&#x5C31;&#x8981;&#x5C06;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x505A;&#x6210;&#x7EDF;&#x4E00;&#x7684;&#x548C;&#x4E1A;&#x52A1;&#x65E0;&#x5173;&#x7684;&#x5E73;&#x53F0;&#x3002;</p>
+<p>&#x548C; SQL &#x548C; NoSQL &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4E0D;&#x4E00;&#x5B9A;&#x9700;&#x8981;&#x516C;&#x53F8;&#x6216;&#x8005;&#x4E1A;&#x52A1;&#x89C4;&#x6A21;&#x5F88;&#x5927;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x8BA4;&#x4E3A;&#x4E1A;&#x52A1;&#x5728;&#x8D77;&#x6B65;&#x9636;&#x6BB5;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x505A;&#x5C0F;&#x6587;&#x4EF6;&#x7EDF;&#x4E00;&#x5B58;&#x50A8;&#x3002;&#x5F97;&#x76CA;&#x4E8E;&#x5F00;&#x6E90;&#x8FD0;&#x52A8;&#x7684;&#x53D1;&#x5C55;&#x548C;&#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x5927;&#x6570;&#x636E;&#x7684;&#x706B;&#x7206;&#xFF0C;&#x5728;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x5E76;&#x4E0D;&#x662F;&#x592A;&#x96BE;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;HBase&#x3001;Hadoop&#x3001;Hypertable&#x3001;FastDFS &#x7B49;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7684;&#x5E95;&#x5C42;&#x5E73;&#x53F0;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E9B;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#x518D;&#x5305;&#x88C5;&#x4E00;&#x4E0B;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x5178;&#x578B;&#x7684;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x6709;&#xFF1A;&#x6DD8;&#x5B9D;&#x7684; TFS&#x3001;&#x4EAC;&#x4E1C; JFS&#x3001;Facebook &#x7684; Haystack&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x662F;&#x6DD8;&#x5B9D; TFS &#x7684;&#x67B6;&#x6784;&#xFF1A;
+<img src="../image/a6afe41fc623ddacfcd7ace9fb3998c0.png" alt="img">
+&#xFF08;<a href="http://code.taobao.org/p/tfs/file/305/structure.png" target="_blank">http://code.taobao.org/p/tfs/file/305/structure.png</a>&#xFF09;</p>
+<h2 id="&#x5927;&#x6587;&#x4EF6;&#x5B58;&#x50A8;">&#x5927;&#x6587;&#x4EF6;&#x5B58;&#x50A8;</h2>
+<p>&#x4E92;&#x8054;&#x7F51;&#x884C;&#x4E1A;&#x7684;&#x5927;&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x4E00;&#x7C7B;&#x662F;&#x4E1A;&#x52A1;&#x4E0A;&#x7684;&#x5927;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982; Youtube &#x7684;&#x89C6;&#x9891;&#x3001;&#x7535;&#x5F71;&#x7F51;&#x7AD9;&#x7684;&#x7535;&#x5F71;&#xFF1B;&#x53E6;&#x4E00;&#x7C7B;&#x662F;&#x6D77;&#x91CF;&#x7684;&#x65E5;&#x5FD7;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982;&#x5404;&#x79CD;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x3001;&#x64CD;&#x4F5C;&#x65E5;&#x5FD7;&#x3001;&#x7528;&#x6237;&#x8F68;&#x8FF9;&#x65E5;&#x5FD7;&#x7B49;&#x3002;&#x548C;&#x5C0F;&#x6587;&#x4EF6;&#x7684;&#x7279;&#x70B9;&#x6B63;&#x597D;&#x76F8;&#x53CD;&#xFF0C;&#x5927;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x91CF;&#x6CA1;&#x6709;&#x5C0F;&#x6587;&#x4EF6;&#x90A3;&#x4E48;&#x591A;&#xFF0C;&#x4F46;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x5F88;&#x5927;&#xFF0C;&#x51E0;&#x767E; MB&#x3001;&#x51E0;&#x4E2A; GB &#x90FD;&#x662F;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x51E0;&#x5341; GB&#x3001;&#x51E0; TB &#x4E5F;&#x662F;&#x6709;&#x53EF;&#x80FD;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x5B58;&#x50A8;&#x4E0A;&#x548C;&#x5C0F;&#x6587;&#x4EF6;&#x6709;&#x8F83;&#x5927;&#x5DEE;&#x522B;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5C06;&#x5C0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x62FF;&#x6765;&#x5B58;&#x50A8;&#x5927;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8BF4;&#x5230;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x7279;&#x522B;&#x8981;&#x63D0;&#x5230; Google &#x548C; Yahoo&#xFF0C;Google &#x7684; 3 &#x7BC7;&#x5927;&#x6570;&#x636E;&#x8BBA;&#x6587;&#xFF08;Bigtable/Map- Reduce/GFS&#xFF09;&#x5F00;&#x542F;&#x4E86;&#x4E00;&#x4E2A;&#x5927;&#x6570;&#x636E;&#x7684;&#x65F6;&#x4EE3;&#xFF0C;&#x800C; Yahoo &#x5F00;&#x6E90;&#x7684; Hadoop &#x7CFB;&#x5217;&#xFF08;HDFS&#x3001;HBase &#x7B49;&#xFF09;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x5784;&#x65AD;&#x4E86;&#x5F00;&#x6E90;&#x754C;&#x7684;&#x5927;&#x6570;&#x636E;&#x5904;&#x7406;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6C5F;&#x5C71;&#x4EE3;&#x6709;&#x624D;&#x4EBA;&#x51FA;&#xFF0C;&#x957F;&#x6C5F;&#x540E;&#x6D6A;&#x63A8;&#x524D;&#x6D6A;&#xFF0C;Hadoop &#x540E;&#x53C8;&#x6709;&#x66F4;&#x591A;&#x4F18;&#x79C0;&#x7684;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#x88AB;&#x8D21;&#x732E;&#x51FA;&#x6765;&#xFF0C;&#x73B0;&#x5728;&#x968F;&#x4FBF;&#x8D70;&#x5230;&#x5927;&#x8857;&#x4E0A;&#x62C9;&#x4F4F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x4E0D;&#x77E5;&#x9053;&#x5927;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x57FA;&#x672C;&#x4E0A;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x662F;&#x201C;&#x706B;&#x661F;&#x7A0B;&#x5E8F;&#x5458;&#x201D;&#x3002;</p>
+<p>&#x5BF9;&#x7167; Google &#x7684;&#x8BBA;&#x6587;&#x6784;&#x5EFA;&#x4E00;&#x5957;&#x5B8C;&#x6574;&#x7684;&#x5927;&#x6570;&#x636E;&#x5904;&#x7406;&#x65B9;&#x6848;&#x7684;&#x96BE;&#x5EA6;&#x548C;&#x6210;&#x672C;&#x5B9E;&#x5728;&#x592A;&#x9AD8;&#xFF0C;&#x800C;&#x4E14;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#x73B0;&#x5728;&#x4E5F;&#x5F88;&#x6210;&#x719F;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5927;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x548C;&#x5904;&#x7406;&#x8FD9;&#x5757;&#x53CD;&#x800C;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x9009;&#x62E9;&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x8FD9;&#x51E0;&#x4E2A;&#x6D41;&#x884C;&#x7684;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;Hadoop&#x3001;HBase&#x3001;Storm&#x3001;Hive &#x7B49;&#x3002;&#x5B9E;&#x529B;&#x96C4;&#x539A;&#x4E00;&#x4E9B;&#x7684;&#x5927;&#x516C;&#x53F8;&#x4F1A;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#xFF0C;&#x7ED3;&#x5408;&#x81EA;&#x5DF1;&#x7684;&#x4E1A;&#x52A1;&#x7279;&#x70B9;&#xFF0C;&#x5C01;&#x88C5;&#x6210;&#x5927;&#x6570;&#x636E;&#x5E73;&#x53F0;&#xFF0C;&#x4F8B;&#x5982;&#x6DD8;&#x5B9D;&#x7684;&#x4E91;&#x68AF;&#x7CFB;&#x7EDF;&#x3001;&#x817E;&#x8BAF;&#x7684; TDW &#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F; Hadoop &#x7684;&#x751F;&#x6001;&#x5708;&#xFF1A;
+<img src="../image/dc76c90fbda1dba32c5dc6d708627182.png" alt="img">
+&#xFF08;<a href="http://i.imgur.com/Dpz74XZ.jpg" target="_blank">http://i.imgur.com/Dpz74XZ.jpg</a>&#xFF09;</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x4ECA;&#x5929;&#x6211;&#x4E3A;&#x4F60;&#x8BB2;&#x4E86;&#x4E92;&#x8054;&#x7F51;&#x67B6;&#x6784;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x5C42;&#x6280;&#x672F;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F53;&#x516C;&#x53F8;&#x89C4;&#x6A21;&#x53D1;&#x5C55;&#x5230;&#x4E00;&#x5B9A;&#x9636;&#x6BB5;&#x540E;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x67D0;&#x4E2A;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#x642D;&#x5EFA;&#x7EDF;&#x4E00;&#x7684;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#xFF0C;&#x5E0C;&#x671B;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x4ECA;&#x5929;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#xFF0C;&#x7559;&#x4E00;&#x9053;&#x601D;&#x8003;&#x9898;&#x7ED9;&#x4F60;&#x5427;&#xFF0C;&#x65E2;&#x7136;&#x5B58;&#x50A8;&#x6280;&#x672F;&#x53D1;&#x5C55;&#x5230;&#x6700;&#x540E;&#x90FD;&#x662F;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#xFF0C;&#x4E3A;&#x4F55;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x7684;&#x5F00;&#x6E90;&#x65B9;&#x6848;&#xFF0C;&#x4F46;&#x4E91;&#x8BA1;&#x7B97;&#x5374;&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#x65B9;&#x6848;&#xFF1F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="39.html" class="navigation navigation-prev " aria-label="Previous page: 39 | 互联网技术演进的模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="41.html" class="navigation navigation-next " aria-label="Next page: 41 | 互联网架构模板：“开发层”和“服务层”技术">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"40 | 互联网架构模板：“存储层”技术","level":"1.1.44","depth":2,"next":{"title":"41 | 互联网架构模板：“开发层”和“服务层”技术","level":"1.1.45","depth":2,"path":"doc/41.md","ref":"doc/41.md","articles":[]},"previous":{"title":"39 | 互联网技术演进的模式","level":"1.1.43","depth":2,"path":"doc/39.md","ref":"doc/39.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/40.md","mtime":"2019-03-19T04:03:03.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-19T06:31:35.087Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

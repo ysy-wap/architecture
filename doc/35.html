@@ -1,0 +1,1034 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>35 | 微服务架构最佳实践 - 方法篇 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="36.html" />
+    
+    
+    <link rel="prev" href="34.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    开篇词 | 照着做，你也能成为架构师！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    01 | 架构到底是指什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    02 | 架构设计的历史背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    03 | 架构设计的目的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    04 | 复杂度来源：高性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    05 | 复杂度来源：高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    06 | 复杂度来源：可扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    07 | 复杂度来源：低成本、安全、规模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    08 | 架构设计三原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    09 | 架构设计原则案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="09-1.html">
+            
+                <a href="09-1.html">
+            
+                    
+                    架构专栏特别放送 | “华仔，放学别走！”第1期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10 | 架构设计流程：识别复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11 | 架构设计流程：设计备选方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12 | 架构设计流程：评估和选择备选方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13 | 架构设计流程：详细方案设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    14 | 高性能数据库集群：读写分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    15 | 高性能数据库集群：分库分表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="15-1.html">
+            
+                <a href="15-1.html">
+            
+                    
+                    架构专栏特别放送 | “华仔，放学别走！” 第2期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    16 | 高性能NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="17.html">
+            
+                <a href="17.html">
+            
+                    
+                    17 | 高性能缓存架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="18.html">
+            
+                <a href="18.html">
+            
+                    
+                    18 | 单服务器高性能模式：PPC与TPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    19 | 单服务器高性能模式：Reactor与Proactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="20.html">
+            
+                <a href="20.html">
+            
+                    
+                    20 | 高性能负载均衡：分类及架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.24" data-path="21.html">
+            
+                <a href="21.html">
+            
+                    
+                    21 | 高性能负载均衡：算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.25" data-path="22.html">
+            
+                <a href="22.html">
+            
+                    
+                    22 | 想成为架构师，你必须知道CAP理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.26" data-path="23.html">
+            
+                <a href="23.html">
+            
+                    
+                    23 | 想成为架构师，你必须掌握的CAP细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.27" data-path="24.html">
+            
+                <a href="24.html">
+            
+                    
+                    24 | FMEA方法，排除架构可用性隐患的利器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.28" data-path="25.html">
+            
+                <a href="25.html">
+            
+                    
+                    25 | 高可用存储架构：双机架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.29" data-path="26.html">
+            
+                <a href="26.html">
+            
+                    
+                    26 | 高可用存储架构：集群和分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.30" data-path="27.html">
+            
+                <a href="27.html">
+            
+                    
+                    27 | 如何设计计算高可用架构？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.31" data-path="27-1.html">
+            
+                <a href="27-1.html">
+            
+                    
+                    如何高效地学习开源项目 | “华仔，放学别走！” 第3期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.32" data-path="28.html">
+            
+                <a href="28.html">
+            
+                    
+                    28 | 业务高可用的保障：异地多活架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.33" data-path="29.html">
+            
+                <a href="29.html">
+            
+                    
+                    29 | 异地多活设计4大技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.34" data-path="30.html">
+            
+                <a href="30.html">
+            
+                    
+                    30 | 异地多活设计4步走
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.35" data-path="31.html">
+            
+                <a href="31.html">
+            
+                    
+                    31 | 如何应对接口级的故障？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.36" data-path="32.html">
+            
+                <a href="32.html">
+            
+                    
+                    32 | 可扩展架构的基本思想和模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.37" data-path="33.html">
+            
+                <a href="33.html">
+            
+                    
+                    33 | 传统的可扩展架构模式：分层架构和SOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.38" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    34 | 深入理解微服务架构：银弹 or 焦油坑？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.39" data-path="35.html">
+            
+                <a href="35.html">
+            
+                    
+                    35 | 微服务架构最佳实践 - 方法篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.40" data-path="36.html">
+            
+                <a href="36.html">
+            
+                    
+                    36 | 微服务架构最佳实践 - 基础设施篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.41" data-path="37.html">
+            
+                <a href="37.html">
+            
+                    
+                    37 | 微内核架构详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.42" data-path="38.html">
+            
+                <a href="38.html">
+            
+                    
+                    38 | 架构师应该如何判断技术演进的方向？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.43" data-path="39.html">
+            
+                <a href="39.html">
+            
+                    
+                    39 | 互联网技术演进的模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.44" data-path="40.html">
+            
+                <a href="40.html">
+            
+                    
+                    40 | 互联网架构模板：“存储层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.45" data-path="41.html">
+            
+                <a href="41.html">
+            
+                    
+                    41 | 互联网架构模板：“开发层”和“服务层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.46" data-path="42.html">
+            
+                <a href="42.html">
+            
+                    
+                    42 | 互联网架构模板：“网络层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.47" data-path="43.html">
+            
+                <a href="43.html">
+            
+                    
+                    43 | 互联网架构模板：“用户层”和“业务层”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.48" data-path="44.html">
+            
+                <a href="44.html">
+            
+                    
+                    44 | 互联网架构模板：“平台”技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.49" data-path="45.html">
+            
+                <a href="45.html">
+            
+                    
+                    45 | 架构重构内功心法第一式：有的放矢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.50" data-path="46.html">
+            
+                <a href="46.html">
+            
+                    
+                    46 | 架构重构内功心法第二式：合纵连横
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.51" data-path="47.html">
+            
+                <a href="47.html">
+            
+                    
+                    47 | 架构重构内功心法第三式：运筹帷幄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.52" data-path="48.html">
+            
+                <a href="48.html">
+            
+                    
+                    48 | 再谈开源项目：如何选择、使用以及二次开发？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.53" data-path="49.html">
+            
+                <a href="49.html">
+            
+                    
+                    49 | 谈谈App架构的演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.54" data-path="50.html">
+            
+                <a href="50.html">
+            
+                    
+                    50 | 架构实战：架构设计文档模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.55" data-path="50-1.html">
+            
+                <a href="50-1.html">
+            
+                    
+                    架构师成长之路 | “华仔，放学别走！” 第4期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.56" data-path="51.html">
+            
+                <a href="51.html">
+            
+                    
+                    结束语 | 坚持，成就你的技术梦想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.57" data-path="51-1.html">
+            
+                <a href="51-1.html">
+            
+                    
+                    架构师必读书单 | “华仔，放学别走！” 第5期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >35 | 微服务架构最佳实践 - 方法篇</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="35--&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;---&#x65B9;&#x6CD5;&#x7BC7;">35 | &#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x6700;&#x4F73;&#x5B9E;&#x8DF5; - &#x65B9;&#x6CD5;&#x7BC7;</h1>
+<p>&#x4E13;&#x680F;&#x4E0A;&#x4E00;&#x671F;&#xFF0C;&#x6211;&#x8C08;&#x4E86;&#x5B9E;&#x65BD;&#x5FAE;&#x670D;&#x52A1;&#x9700;&#x8981;&#x907F;&#x514D;&#x8E29;&#x7684;&#x9677;&#x9631;&#xFF0C;&#x7B80;&#x5355;&#x63D0;&#x70BC;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x8FC7;&#x7EC6;&#xFF0C;&#x8FC7;&#x5206;&#x5F3A;&#x8C03;&#x201C;small&#x201D;&#x3002;</li>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x4E0D;&#x5065;&#x5168;&#xFF0C;&#x5FFD;&#x7565;&#x4E86;&#x201C;automated&#x201D;&#x3002;</li>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x5E76;&#x4E0D;&#x8F7B;&#x91CF;&#x7EA7;&#xFF0C;&#x89C4;&#x6A21;&#x5927;&#x4E86;&#x540E;&#xFF0C;&#x201C;lightweight&#x201D;&#x4E0D;&#x518D;&#x9002;&#x5E94;&#x3002;</li>
+</ul>
+<p>&#x9488;&#x5BF9;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5FAE;&#x670D;&#x52A1;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x505A;&#x3002;&#x6211;&#x4F1A;&#x5206;&#x4E24;&#x671F;&#x4ECB;&#x7ECD;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#xFF0C;&#x4ECA;&#x5929;&#x662F;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x7684;&#x65B9;&#x6CD5;&#x7BC7;&#xFF0C;&#x4E0B;&#x4E00;&#x671F;&#x662F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7BC7;&#x3002;</p>
+<h2 id="&#x670D;&#x52A1;&#x7C92;&#x5EA6;">&#x670D;&#x52A1;&#x7C92;&#x5EA6;</h2>
+<p>&#x9488;&#x5BF9;&#x5FAE;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x8FC7;&#x7EC6;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x57FA;&#x4E8E;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x7C7B;&#x4F3C;&#x8D1D;&#x7D22;&#x65AF;&#x5728;&#x5B9A;&#x4E49;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x65F6;&#x63D0;&#x51FA;&#x7684;&#x201C;&#x4E24;&#x4E2A;&#x62AB;&#x8428;&#x201D;&#x7406;&#x8BBA;&#xFF08;&#x6BCF;&#x4E2A;&#x56E2;&#x961F;&#x7684;&#x4EBA;&#x6570;&#x4E0D;&#x80FD;&#x591A;&#x5230;&#x4E24;&#x5F20;&#x62AB;&#x8428;&#x90FD;&#x4E0D;&#x591F;&#x5403;&#x7684;&#x5730;&#x6B65;&#xFF09;&#xFF0C;&#x5206;&#x4EAB;&#x4E00;&#x4E2A;&#x6211;&#x8BA4;&#x4E3A;&#x5FAE;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x7C92;&#x5EA6;&#x7684;&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x539F;&#x5219;&#xFF0C;&#x5373;&#x4E00;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x4E09;&#x4E2A;&#x4EBA;&#x8D1F;&#x8D23;&#x5F00;&#x53D1;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x65BD;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x65F6;&#xFF0C;&#x6839;&#x636E;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x6765;&#x5212;&#x5206;&#x5FAE;&#x670D;&#x52A1;&#x6570;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x4E1A;&#x52A1;&#x89C4;&#x7EE7;&#x7EED;&#x53D1;&#x5C55;&#xFF0C;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x6269;&#x5927;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x5C06;&#x5DF2;&#x6709;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x56E2;&#x961F;&#x6700;&#x521D;&#x6709; 6 &#x4E2A;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5212;&#x5206;&#x4E3A; 2 &#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;&#x968F;&#x7740;&#x4E1A;&#x52A1;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x903B;&#x8F91;&#x8D8A;&#x6765;&#x8D8A;&#x590D;&#x6742;&#xFF0C;&#x56E2;&#x961F;&#x6269;&#x5C55;&#x5230; 12 &#x4E2A;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5DF2;&#x6709;&#x7684; 2 &#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x53D8;&#x6210; 4 &#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x662F; 3 &#x4E2A;&#x4EBA;&#xFF0C;&#x4E0D;&#x662F; 4 &#x4E2A;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F; 2 &#x4E2A;&#x5462;&#xFF1F;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4ECE;&#x7CFB;&#x7EDF;&#x89C4;&#x6A21;&#x6765;&#x8BB2;&#xFF0C;3 &#x4E2A;&#x4EBA;&#x8D1F;&#x8D23;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x521A;&#x597D;&#x8FBE;&#x5230;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x80FD;&#x5168;&#x9762;&#x7406;&#x89E3;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x53C8;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x5206;&#x5DE5;&#x7684;&#x7C92;&#x5EA6;&#xFF1B;&#x5982;&#x679C;&#x662F; 2 &#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x4E0D;&#x591F;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x80FD;&#x89C9;&#x5F97;&#x65E0;&#x6CD5;&#x4F53;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x6280;&#x672F;&#x5B9E;&#x529B;&#xFF1B;&#x5982;&#x679C;&#x662F; 4 &#x4E2A;&#x751A;&#x81F3;&#x66F4;&#x591A;&#x4EBA;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x7CFB;&#x7EDF;&#x590D;&#x6742;&#x5EA6;&#x53C8;&#x4F1A;&#x65E0;&#x6CD5;&#x8BA9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x7EC6;&#x8282;&#x90FD;&#x4E86;&#x89E3;&#x5F88;&#x6DF1;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;&#x4ECE;&#x56E2;&#x961F;&#x7BA1;&#x7406;&#x6765;&#x8BF4;&#xFF0C;3 &#x4E2A;&#x4EBA;&#x53EF;&#x4EE5;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x7A33;&#x5B9A;&#x7684;&#x5907;&#x4EFD;&#xFF0C;&#x5373;&#x4F7F; 1 &#x4E2A;&#x4EBA;&#x4F11;&#x5047;&#x6216;&#x8005;&#x8C03;&#x914D;&#x5230;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5269;&#x4F59; 2 &#x4E2A;&#x4EBA;&#x8FD8;&#x53EF;&#x4EE5;&#x652F;&#x6491;&#xFF1B;&#x5982;&#x679C;&#x662F; 2 &#x4E2A;&#x4EBA;&#xFF0C;&#x62BD;&#x8C03; 1 &#x4E2A;&#x540E;&#x5269;&#x4F59;&#x7684; 1 &#x4E2A;&#x4EBA;&#x538B;&#x529B;&#x5F88;&#x5927;&#xFF1B;&#x5982;&#x679C;&#x662F; 1 &#x4E2A;&#x4EBA;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x5355;&#x70B9;&#x4E86;&#xFF0C;&#x56E2;&#x961F;&#x6CA1;&#x6709;&#x5907;&#x4EFD;&#xFF0C;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5F88;&#x5371;&#x9669;&#x7684;&#xFF0C;&#x5047;&#x5982;&#x8FD9;&#x4E2A;&#x4EBA;&#x4F11;&#x5047;&#x4E86;&#xFF0C;&#x7CFB;&#x7EDF;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x4ECE;&#x6280;&#x672F;&#x63D0;&#x5347;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8BB2;&#xFF0C;3 &#x4E2A;&#x4EBA;&#x7684;&#x6280;&#x672F;&#x5C0F;&#x7EC4;&#x65E2;&#x80FD;&#x591F;&#x5F62;&#x6210;&#x6709;&#x6548;&#x7684;&#x8BA8;&#x8BBA;&#xFF0C;&#x53C8;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x8FBE;&#x6210;&#x4E00;&#x81F4;&#x610F;&#x89C1;&#xFF1B;&#x5982;&#x679C;&#x662F; 2 &#x4E2A;&#x4EBA;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x4E92;&#x76F8;&#x575A;&#x6301;&#x81EA;&#x5DF1;&#x7684;&#x610F;&#x89C1;&#xFF0C;&#x6216;&#x8005; 2 &#x4E2A;&#x4EBA;&#x7ECF;&#x9A8C;&#x90FD;&#x4E0D;&#x8DB3;&#x5BFC;&#x81F4;&#x8BBE;&#x8BA1;&#x7F3A;&#x9677;&#xFF1B;&#x5982;&#x679C;&#x662F; 1 &#x4E2A;&#x4EBA;&#xFF0C;&#x7531;&#x4E8E;&#x6CA1;&#x6709;&#x4EBA;&#x8DDF;&#x4ED6;&#x8FDB;&#x884C;&#x6280;&#x672F;&#x8BA8;&#x8BBA;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x9677;&#x5165;&#x601D;&#x7EF4;&#x76F2;&#x533A;&#x5BFC;&#x81F4;&#x91CD;&#x5927;&#x95EE;&#x9898;&#xFF1B;&#x5982;&#x679C;&#x662F; 4 &#x4E2A;&#x4EBA;&#x6216;&#x8005;&#x66F4;&#x591A;&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#x7684;&#x53C2;&#x4E0E;&#x7684;&#x4EBA;&#x5458;&#x5E76;&#x6CA1;&#x6709;&#x8BA4;&#x771F;&#x53C2;&#x4E0E;&#xFF0C;&#x53EA;&#x662F;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x7684;&#x539F;&#x5219;&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x4E8E;&#x5FAE;&#x670D;&#x52A1;&#x8BBE;&#x8BA1;&#x548C;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#xFF0C;&#x5982;&#x679C;&#x5FAE;&#x670D;&#x52A1;&#x7ECF;&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x53D1;&#x5C55;&#x540E;&#x5DF2;&#x7ECF;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;&#xFF0C;&#x5904;&#x4E8E;&#x7EF4;&#x62A4;&#x671F;&#x4E86;&#xFF0C;&#x65E0;&#x987B;&#x592A;&#x591A;&#x7684;&#x5F00;&#x53D1;&#xFF0C;&#x90A3;&#x4E48;&#x5E73;&#x5747; 1 &#x4E2A;&#x4EBA;&#x7EF4;&#x62A4; 1 &#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x751A;&#x81F3;&#x51E0;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x90FD;&#x53EF;&#x4EE5;&#x3002;&#x5F53;&#x7136;&#x8003;&#x8651;&#x5230;&#x4EBA;&#x5458;&#x5907;&#x4EFD;&#x95EE;&#x9898;&#xFF0C;&#x6BCF;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x6700;&#x597D;&#x90FD;&#x5B89;&#x6392; 2 &#x4E2A;&#x4EBA;&#x7EF4;&#x62A4;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x7EF4;&#x62A4;&#x591A;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x3002;</p>
+<h2 id="&#x62C6;&#x5206;&#x65B9;&#x6CD5;">&#x62C6;&#x5206;&#x65B9;&#x6CD5;</h2>
+<p>&#x57FA;&#x4E8E;&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x7684;&#x7406;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x62C6;&#x5206;&#x540E;&#x5408;&#x9002;&#x7684;&#x670D;&#x52A1;&#x6570;&#x91CF;&#xFF0C;&#x4F46;&#x5177;&#x4F53;&#x600E;&#x4E48;&#x62C6;&#x4E5F;&#x662F;&#x6709;&#x6280;&#x5DE7;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x5FEB;&#x5200;&#x780D;&#x4E71;&#x9EBB;&#x968F;&#x4FBF;&#x62C6;&#x5206;&#x6210;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x53EA;&#x80FD;&#x6309;&#x7167;&#x4E1A;&#x52A1;&#x6765;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x800C;&#x662F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x76EE;&#x7684;&#x7684;&#x4E0D;&#x540C;&#x7075;&#x6D3B;&#x5730;&#x9009;&#x53D6;&#x4E0D;&#x540C;&#x7684;&#x62C6;&#x5206;&#x65B9;&#x5F0F;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4E00;&#x4E00;&#x4ECB;&#x7ECD;&#x5E38;&#x89C1;&#x7684;&#x62C6;&#x5206;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>\1. &#x57FA;&#x4E8E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x62C6;&#x5206;</p>
+<p>&#x8FD9;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x79CD;&#x62C6;&#x5206;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x6309;&#x7167;&#x804C;&#x8D23;&#x8303;&#x56F4;&#x8BC6;&#x522B;&#x51FA;&#x6765;&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x62C6;&#x5206;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x62C6;&#x5206;&#x867D;&#x7136;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x76F4;&#x89C2;&#xFF0C;&#x4F46;&#x5728;&#x5B9E;&#x8DF5;&#x8FC7;&#x7A0B;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x662F;&#x56E2;&#x961F;&#x6210;&#x5458;&#x5BF9;&#x4E8E;&#x201C;&#x804C;&#x8D23;&#x8303;&#x56F4;&#x201D;&#x7684;&#x7406;&#x89E3;&#x5DEE;&#x5F02;&#x5F88;&#x5927;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x51FA;&#x73B0;&#x4E89;&#x8BBA;&#xFF0C;&#x96BE;&#x4EE5;&#x8FBE;&#x6210;&#x4E00;&#x81F4;&#x610F;&#x89C1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E2A;&#x7535;&#x5546;&#x7CFB;&#x7EDF;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5C06;&#x670D;&#x52A1;&#x5212;&#x5206;&#x4E3A;&#x201C;&#x5546;&#x54C1;&#x201D;&#x201C;&#x4EA4;&#x6613;&#x201D;&#x201C;&#x7528;&#x6237;&#x201D;3 &#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5212;&#x5206;&#x4E3A;&#x201C;&#x5546;&#x54C1;&#x201D;&#x201C;&#x8BA2;&#x5355;&#x201D;&#x201C;&#x652F;&#x4ED8;&#x201D;&#x201C;&#x53D1;&#x8D27;&#x201D;&#x201C;&#x4E70;&#x5BB6;&#x201D;&#x201C;&#x5356;&#x5BB6;&#x201D;6 &#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x54EA;&#x79CD;&#x65B9;&#x5F0F;&#x66F4;&#x5408;&#x7406;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5212;&#x5206;&#x8D8A;&#x7EC6;&#x8D8A;&#x6B63;&#x786E;&#xFF1F;</p>
+<p>&#x5BFC;&#x81F4;&#x8FD9;&#x79CD;&#x56F0;&#x60D1;&#x7684;&#x4E3B;&#x8981;&#x6839;&#x56E0;&#x5728;&#x4E8E;&#x4ECE;&#x4E1A;&#x52A1;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x62C6;&#x5206;&#x7684;&#x8BDD;&#xFF0C;&#x89C4;&#x6A21;&#x7C97;&#x548C;&#x89C4;&#x6A21;&#x7EC6;&#x90FD;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x62C6;&#x5206;&#x57FA;&#x7840;&#x90FD;&#x662F;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x8981;&#x5224;&#x65AD;&#x62C6;&#x5206;&#x7C92;&#x5EA6;&#xFF0C;&#x4E0D;&#x80FD;&#x4ECE;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x89D2;&#x5EA6;&#xFF0C;&#x800C;&#x8981;&#x6839;&#x636E;&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x7684;&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x7684;&#x539F;&#x5219;&#xFF0C;&#x8BA1;&#x7B97;&#x4E00;&#x4E0B;&#x5927;&#x6982;&#x7684;&#x670D;&#x52A1;&#x6570;&#x91CF;&#x8303;&#x56F4;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x786E;&#x5B9A;&#x5408;&#x9002;&#x7684;&#x201C;&#x804C;&#x8D23;&#x8303;&#x56F4;&#x201D;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5212;&#x5206;&#x8FC7;&#x7C97;&#x6216;&#x8005;&#x8FC7;&#x7EC6;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x800C;&#x4E14;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x51FA;&#x73B0;&#x8FC7;&#x7EC6;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x5982;&#x679C;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x662F; 10 &#x4E2A;&#x4EBA;&#x652F;&#x6491;&#x4E1A;&#x52A1;&#xFF0C;&#x6309;&#x7167;&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x89C4;&#x5219;&#x8BA1;&#x7B97;&#xFF0C;&#x5927;&#x7EA6;&#x9700;&#x8981;&#x5212;&#x5206;&#x4E3A; 4 &#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x201C;&#x767B;&#x5F55;&#x3001;&#x6CE8;&#x518C;&#x3001;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7BA1;&#x7406;&#x201D;&#x90FD;&#x53EF;&#x4EE5;&#x5212;&#x5230;&#x201C;&#x7528;&#x6237;&#x670D;&#x52A1;&#x201D;&#x804C;&#x8D23;&#x8303;&#x56F4;&#x5185;&#xFF1B;&#x5982;&#x679C;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x662F; 100 &#x4EBA;&#x652F;&#x6491;&#x4E1A;&#x52A1;&#xFF0C;&#x670D;&#x52A1;&#x6570;&#x91CF;&#x53EF;&#x4EE5;&#x8FBE;&#x5230; 40 &#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x201C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x201C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x4E86;&#xFF1B;&#x5982;&#x679C;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x8FBE;&#x5230; 1000 &#x4EBA;&#x652F;&#x6491;&#x4E1A;&#x52A1;&#xFF0C;&#x90A3;&#x201C;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;&#x201D;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x670D;&#x52A1;&#x4E86;&#x3002;</p>
+<p>\2. &#x57FA;&#x4E8E;&#x53EF;&#x6269;&#x5C55;&#x62C6;&#x5206;</p>
+<p>&#x5C06;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x6309;&#x7167;&#x7A33;&#x5B9A;&#x6027;&#x6392;&#x5E8F;&#xFF0C;&#x5C06;&#x5DF2;&#x7ECF;&#x6210;&#x719F;&#x548C;&#x6539;&#x52A8;&#x4E0D;&#x5927;&#x7684;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x4E3A;<strong>&#x7A33;&#x5B9A;&#x670D;&#x52A1;</strong>&#xFF0C;&#x5C06;&#x7ECF;&#x5E38;&#x53D8;&#x5316;&#x548C;&#x8FED;&#x4EE3;&#x7684;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x4E3A;<strong>&#x53D8;&#x52A8;&#x670D;&#x52A1;</strong>&#x3002;&#x7A33;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x7C92;&#x5EA6;&#x53EF;&#x4EE5;&#x7C97;&#x4E00;&#x4E9B;&#xFF0C;&#x5373;&#x4F7F;&#x903B;&#x8F91;&#x4E0A;&#x6CA1;&#x6709;&#x5F3A;&#x5173;&#x8054;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5B50;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x5C06;&#x201C;&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x201D;&#x548C;&#x201C;&#x5347;&#x7EA7;&#x670D;&#x52A1;&#x201D;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5B50;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF1B;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x7C92;&#x5EA6;&#x53EF;&#x4EE5;&#x7EC6;&#x4E00;&#x4E9B;&#xFF0C;&#x4F46;&#x4E5F;&#x4E0D;&#x8981;&#x592A;&#x7EC6;&#xFF0C;&#x59CB;&#x7EC8;&#x8BB0;&#x4F4F;&#x8981;&#x63A7;&#x5236;&#x670D;&#x52A1;&#x7684;&#x603B;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x62C6;&#x5206;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x9879;&#x76EE;&#x5FEB;&#x901F;&#x8FED;&#x4EE3;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x907F;&#x514D;&#x5728;&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x5C0F;&#x5FC3;&#x5F71;&#x54CD;&#x4E86;&#x5DF2;&#x6709;&#x7684;&#x6210;&#x719F;&#x529F;&#x80FD;&#x5BFC;&#x81F4;&#x7EBF;&#x4E0A;&#x95EE;&#x9898;&#x3002;</p>
+<p>\3. &#x57FA;&#x4E8E;&#x53EF;&#x9760;&#x6027;&#x62C6;&#x5206;</p>
+<p>&#x5C06;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#x6392;&#x5E8F;&#xFF0C;&#x5C06;&#x53EF;&#x9760;&#x6027;&#x8981;&#x6C42;&#x9AD8;&#x7684;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x548C;&#x53EF;&#x9760;&#x6027;&#x8981;&#x6C42;&#x4F4E;&#x7684;&#x975E;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x5F00;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x70B9;&#x4FDD;&#x8BC1;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x3002;&#x5177;&#x4F53;&#x62C6;&#x5206;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;&#xFF0C;&#x53EA;&#x8981;&#x6700;&#x7EC8;&#x7684;&#x670D;&#x52A1;&#x6570;&#x91CF;&#x6EE1;&#x8DB3;&#x201C;&#x4E09;&#x4E2A;&#x706B;&#x67AA;&#x624B;&#x201D;&#x7684;&#x539F;&#x5219;&#x5C31;&#x53EF;&#x4EE5;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x62C6;&#x5206;&#x5E26;&#x6765;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x907F;&#x514D;&#x975E;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x6545;&#x969C;&#x5F71;&#x54CD;&#x6838;&#x5FC3;&#x670D;&#x52A1;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x65E5;&#x5FD7;&#x4E0A;&#x62A5;&#x4E00;&#x822C;&#x90FD;&#x5C5E;&#x4E8E;&#x975E;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x53EF;&#x80FD;&#x6709;&#x5927;&#x91CF;&#x7684;&#x65E5;&#x5FD7;&#x4E0A;&#x62A5;&#xFF0C;&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x62C6;&#x5206;&#xFF0C;&#x90A3;&#x4E48;&#x65E5;&#x5FD7;&#x4E0A;&#x62A5;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x6545;&#x969C;&#xFF1B;&#x62C6;&#x5206;&#x540E;&#x5373;&#x4F7F;&#x65E5;&#x5FD7;&#x4E0A;&#x62A5;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x3002;</p>
+<ul>
+<li>&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x9AD8;&#x53EF;&#x7528;&#x65B9;&#x6848;&#x53EF;&#x4EE5;&#x66F4;&#x7B80;&#x5355;</li>
+</ul>
+<p>&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x7684;&#x529F;&#x80FD;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x66F4;&#x5C11;&#xFF0C;&#x7528;&#x5230;&#x7684;&#x7EC4;&#x4EF6;&#x4E5F;&#x4F1A;&#x66F4;&#x5C11;&#xFF0C;&#x8BBE;&#x8BA1;&#x9AD8;&#x53EF;&#x7528;&#x65B9;&#x6848;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#x8981;&#x6BD4;&#x4E0D;&#x62C6;&#x5206;&#x7B80;&#x5355;&#x5F88;&#x591A;&#x3002;</p>
+<ul>
+<li>&#x80FD;&#x591F;&#x964D;&#x4F4E;&#x9AD8;&#x53EF;&#x7528;&#x6210;&#x672C;</li>
+</ul>
+<p>&#x5C06;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x51FA;&#x6765;&#x540E;&#xFF0C;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x5360;&#x7528;&#x7684;&#x673A;&#x5668;&#x3001;&#x5E26;&#x5BBD;&#x7B49;&#x8D44;&#x6E90;&#x6BD4;&#x4E0D;&#x62C6;&#x5206;&#x8981;&#x5C11;&#x5F88;&#x591A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x9488;&#x5BF9;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x505A;&#x9AD8;&#x53EF;&#x7528;&#x65B9;&#x6848;&#xFF0C;&#x673A;&#x5668;&#x3001;&#x5E26;&#x5BBD;&#x7B49;&#x6210;&#x672C;&#x6BD4;&#x4E0D;&#x62C6;&#x5206;&#x8981;&#x8282;&#x7701;&#x8F83;&#x591A;&#x3002;</p>
+<p>\4. &#x57FA;&#x4E8E;&#x6027;&#x80FD;&#x62C6;&#x5206;</p>
+<p>&#x57FA;&#x4E8E;&#x6027;&#x80FD;&#x62C6;&#x5206;&#x548C;&#x57FA;&#x4E8E;&#x53EF;&#x9760;&#x6027;&#x62C6;&#x5206;&#x7C7B;&#x4F3C;&#xFF0C;&#x5C06;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x9AD8;&#x6216;&#x8005;&#x6027;&#x80FD;&#x538B;&#x529B;&#x5927;&#x7684;&#x6A21;&#x5757;&#x62C6;&#x5206;&#x51FA;&#x6765;&#xFF0C;&#x907F;&#x514D;&#x6027;&#x80FD;&#x538B;&#x529B;&#x5927;&#x7684;&#x670D;&#x52A1;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x62C6;&#x5206;&#x65B9;&#x5F0F;&#x548C;&#x5177;&#x4F53;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x6709;&#x5173;&#xFF0C;&#x53EF;&#x4EE5;&#x62C6;&#x5206; Web &#x670D;&#x52A1;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x7F13;&#x5B58;&#x7B49;&#x3002;&#x4F8B;&#x5982;&#x7535;&#x5546;&#x7684;&#x62A2;&#x8D2D;&#xFF0C;&#x6027;&#x80FD;&#x538B;&#x529B;&#x6700;&#x5927;&#x7684;&#x662F;&#x5165;&#x53E3;&#x7684;&#x6392;&#x961F;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6392;&#x961F;&#x529F;&#x80FD;&#x72EC;&#x7ACB;&#x4E3A;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x51E0;&#x79CD;&#x62C6;&#x5206;&#x65B9;&#x5F0F;&#x4E0D;&#x662F;&#x591A;&#x9009;&#x4E00;&#xFF0C;&#x800C;&#x662F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x81EA;&#x7531;&#x6392;&#x5217;&#x7EC4;&#x5408;&#xFF0C;&#x4F8B;&#x5982;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x53EF;&#x9760;&#x6027;&#x62C6;&#x5206;&#x51FA;&#x670D;&#x52A1; A&#xFF0C;&#x57FA;&#x4E8E;&#x6027;&#x80FD;&#x62C6;&#x5206;&#x51FA;&#x670D;&#x52A1; B&#xFF0C;&#x57FA;&#x4E8E;&#x53EF;&#x6269;&#x5C55;&#x62C6;&#x5206;&#x51FA; C/D/F &#x4E09;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x52A0;&#x4E0A;&#x539F;&#x6709;&#x7684;&#x670D;&#x52A1; X&#xFF0C;&#x6700;&#x540E;&#x603B;&#x5171;&#x62C6;&#x5206;&#x51FA; 6 &#x4E2A;&#x670D;&#x52A1;&#xFF08;A/B/C/D/F/X&#xFF09;&#x3002;</p>
+<h2 id="&#x57FA;&#x7840;&#x8BBE;&#x65BD;">&#x57FA;&#x7840;&#x8BBE;&#x65BD;</h2>
+<p>&#x5927;&#x90E8;&#x5206;&#x4EBA;&#x4E3B;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x662F;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x201C;small&#x201D;&#x548C;&#x201C;lightweight&#x201D;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x771F;&#x6B63;&#x51B3;&#x5B9A;&#x5FAE;&#x670D;&#x52A1;&#x6210;&#x8D25;&#x7684;&#xFF0C;&#x6070;&#x6070;&#x662F;&#x90A3;&#x4E2A;&#x88AB;&#x5927;&#x90E8;&#x5206;&#x4EBA;&#x90FD;&#x5FFD;&#x7565;&#x7684;&#x201C;automated&#x201D;&#x3002;&#x4E3A;&#x4F55;&#x8FD9;&#x6837;&#x8BF4;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x670D;&#x52A1;&#x7C92;&#x5EA6;&#x5373;&#x4F7F;&#x5212;&#x5206;&#x4E0D;&#x5408;&#x7406;&#xFF0C;&#x5B9E;&#x9645;&#x843D;&#x5730;&#x540E;&#x5982;&#x679C;&#x56E2;&#x961F;&#x9047;&#x5230;&#x9EBB;&#x70E6;&#xFF0C;&#x81EA;&#x7136;&#x4F1A;&#x60F3;&#x5230;&#x62C6;&#x670D;&#x52A1;&#x6216;&#x8005;&#x5408;&#x670D;&#x52A1;&#xFF1B;&#x5982;&#x679C;&#x201C;automated&#x201D;&#x76F8;&#x5173;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x4E0D;&#x5065;&#x5168;&#xFF0C;&#x90A3;&#x5FAE;&#x670D;&#x52A1;&#x5C31;&#x662F;&#x7126;&#x6CB9;&#x5751;&#xFF0C;&#x8BA9;&#x7814;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x3001;&#x8FD0;&#x7EF4;&#x9677;&#x5165;&#x6211;&#x4E0A;&#x4E00;&#x671F;&#x8BB2;&#x7684;&#x5404;&#x79CD;&#x5FAE;&#x670D;&#x52A1;&#x9677;&#x9631;&#x4E2D;&#x3002;</p>
+<p>&#x5FAE;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="../image/f866d73aa62748074b6ddcfc1cee92c1.png" alt="img"></p>
+<p>&#x770B;&#x5230;&#x4E0A;&#x9762;&#x8FD9;&#x5F20;&#x56FE;&#xFF0C;&#x76F8;&#x4FE1;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x4F1A;&#x5012;&#x5438;&#x4E00;&#x53E3;&#x51C9;&#x6C14;&#xFF0C;&#x8BF4;&#x597D;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x201C;&#x8F7B;&#x91CF;&#x7EA7;&#x201D;&#x5462;&#xFF1F;&#x90FD;&#x8FD9;&#x4E48;&#x591A;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x8FD8;&#x597D;&#x610F;&#x601D;&#x8BF4;&#x81EA;&#x5DF1;&#x662F;&#x201C;&#x8F7B;&#x91CF;&#x7EA7;&#x201D;&#xFF0C;&#x611F;&#x89C9;&#x6BD4; ESB &#x8FD8;&#x8981;&#x590D;&#x6742;&#x554A;&#xFF1F;</p>
+<p>&#x786E;&#x5B9E;&#x5982;&#x6B64;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x591A;&#x4EBA;&#x8BA4;&#x4E3A;&#x7684;&#x90A3;&#x6837;&#x53C8;&#x7B80;&#x5355;&#x53C8;&#x8F7B;&#x91CF;&#x7EA7;&#x3002;&#x8981;&#x505A;&#x597D;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x4E9B;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x90FD;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#xFF0C;&#x5426;&#x5219;&#x5FAE;&#x670D;&#x52A1;&#x5C31;&#x4F1A;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x7126;&#x6CB9;&#x5751;&#xFF0C;&#x8BA9;&#x4E1A;&#x52A1;&#x548C;&#x56E2;&#x961F;&#x5728;&#x91CC;&#x9762;&#x4E0D;&#x65AD;&#x6323;&#x624E;&#x4E14;&#x65E0;&#x6CD5;&#x81EA;&#x62D4;&#x3002;&#x56E0;&#x6B64;&#x4E5F;&#x53EF;&#x4EE5;&#x8BF4;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x5E76;&#x6CA1;&#x6709;&#x51CF;&#x5C11;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x800C;&#x53EA;&#x662F;&#x5C06;&#x590D;&#x6742;&#x5EA6;&#x4ECE; ESB &#x8F6C;&#x79FB;&#x5230;&#x4E86;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x201C;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x201D;&#x201C;&#x670D;&#x52A1;&#x8DEF;&#x7531;&#x201D;&#x7B49;&#x5176;&#x5B9E;&#x90FD;&#x662F; ESB &#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x4E2D;&#x5265;&#x79BB;&#x51FA;&#x6765;&#x6210;&#x4E86;&#x72EC;&#x7ACB;&#x7684;&#x57FA;&#x7840;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x5EFA;&#x8BBE;&#x5B8C;&#x5584;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x662F;&#x4E00;&#x9879;&#x5E9E;&#x5927;&#x7684;&#x5DE5;&#x7A0B;&#xFF0C;&#x4F46;&#x4E5F;&#x4E0D;&#x7528;&#x592A;&#x8FC7;&#x7070;&#x5FC3;&#xFF0C;&#x8BA4;&#x4E3A;&#x81EA;&#x5DF1;&#x56E2;&#x961F;&#x5C0F;&#x6216;&#x8005;&#x516C;&#x53F8;&#x89C4;&#x6A21;&#x4E0D;&#x5927;&#x5C31;&#x4E0D;&#x80FD;&#x5B9E;&#x65BD;&#x5FAE;&#x670D;&#x52A1;&#x4E86;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x539F;&#x56E0;&#x662F;&#x5DF2;&#x7ECF;&#x6709;&#x5F00;&#x6E90;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5168;&#x5BB6;&#x6876;&#x4E86;&#xFF0C;&#x4F8B;&#x5982;&#x5927;&#x540D;&#x9F0E;&#x9F0E;&#x7684; Spring Cloud &#x9879;&#x76EE;&#xFF0C;&#x6DB5;&#x76D6;&#x4E86;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x3001;&#x670D;&#x52A1;&#x8DEF;&#x7531;&#x3001;&#x7F51;&#x5173;&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#x7B49;&#x529F;&#x80FD;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x539F;&#x56E0;&#x662F;&#x5982;&#x679C;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x6570;&#x91CF;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x591A;&#x7684;&#x8BDD;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x90FD;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x4F18;&#x5148;&#x7EA7;&#x6765;&#x642D;&#x5EFA;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF1A;</p>
+<p>\1. &#x670D;&#x52A1;&#x53D1;&#x73B0;&#x3001;&#x670D;&#x52A1;&#x8DEF;&#x7531;&#x3001;&#x670D;&#x52A1;&#x5BB9;&#x9519;&#xFF1A;&#x8FD9;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;</p>
+<p>\2. &#x63A5;&#x53E3;&#x6846;&#x67B6;&#x3001;API &#x7F51;&#x5173;&#xFF1A;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x5F00;&#x53D1;&#x6548;&#x7387;&#xFF0C;&#x63A5;&#x53E3;&#x6846;&#x67B6;&#x662F;&#x63D0;&#x5347;&#x5185;&#x90E8;&#x670D;&#x52A1;&#x7684;&#x5F00;&#x53D1;&#x6548;&#x7387;&#xFF0C;API &#x7F51;&#x5173;&#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x4E0E;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x5BF9;&#x63A5;&#x7684;&#x6548;&#x7387;&#x3002;</p>
+<p>\3. &#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x3001;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#xFF1A;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x6D4B;&#x8BD5;&#x548C;&#x8FD0;&#x7EF4;&#x6548;&#x7387;&#x3002;</p>
+<p>\4. &#x670D;&#x52A1;&#x76D1;&#x63A7;&#x3001;&#x670D;&#x52A1;&#x8DDF;&#x8E2A;&#x3001;&#x670D;&#x52A1;&#x5B89;&#x5168;&#xFF1A;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x63D0;&#x5347;&#x8FD0;&#x7EF4;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A; 3 &#x548C; 4 &#x4E24;&#x7C7B;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF0C;&#x5176;&#x91CD;&#x8981;&#x6027;&#x4F1A;&#x968F;&#x7740;&#x5FAE;&#x670D;&#x52A1;&#x8282;&#x70B9;&#x6570;&#x91CF;&#x589E;&#x52A0;&#x800C;&#x8D8A;&#x6765;&#x8D8A;&#x91CD;&#x8981;&#xFF0C;&#x4F46;&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x8282;&#x70B9;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EBA;&#x5DE5;&#x7684;&#x65B9;&#x5F0F;&#x652F;&#x6491;&#xFF0C;&#x867D;&#x7136;&#x6548;&#x7387;&#x4E0D;&#x9AD8;&#xFF0C;&#x4F46;&#x4E5F;&#x57FA;&#x672C;&#x80FD;&#x591F;&#x9876;&#x4F4F;&#x3002;</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x4ECA;&#x5929;&#x6211;&#x4E3A;&#x4F60;&#x8BB2;&#x4E86;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x5B9E;&#x8DF5;&#x4E2D;&#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x70B9;&#xFF1A;&#x5982;&#x4F55;&#x628A;&#x63E1;&#x62C6;&#x5206;&#x7C92;&#x5EA6;&#x3001;&#x6309;&#x7167;&#x4EC0;&#x4E48;&#x7EF4;&#x5EA6;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#x3001;&#x9700;&#x8981;&#x4EC0;&#x4E48;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x652F;&#x6491;&#xFF0C;&#x5E0C;&#x671B;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x4ECA;&#x5929;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#xFF0C;&#x7559;&#x4E00;&#x9053;&#x601D;&#x8003;&#x9898;&#x7ED9;&#x4F60;&#x5427;&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x7AE0;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x601D;&#x8003;&#x4E00;&#x4E0B;&#x4F60;&#x6240;&#x5728;&#x7684;&#x4E1A;&#x52A1;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x662F;&#x5426;&#x8FD8;&#x6709;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x548C;&#x63D0;&#x5347;&#x7684;&#x7A7A;&#x95F4;&#xFF1F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="34.html" class="navigation navigation-prev " aria-label="Previous page: 34 | 深入理解微服务架构：银弹 or 焦油坑？">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="36.html" class="navigation navigation-next " aria-label="Next page: 36 | 微服务架构最佳实践 - 基础设施篇">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"35 | 微服务架构最佳实践 - 方法篇","level":"1.1.39","depth":2,"next":{"title":"36 | 微服务架构最佳实践 - 基础设施篇","level":"1.1.40","depth":2,"path":"doc/36.md","ref":"doc/36.md","articles":[]},"previous":{"title":"34 | 深入理解微服务架构：银弹 or 焦油坑？","level":"1.1.38","depth":2,"path":"doc/34.md","ref":"doc/34.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/35.md","mtime":"2019-03-19T04:03:03.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-19T06:31:35.087Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
